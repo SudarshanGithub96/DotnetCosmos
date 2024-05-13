@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<style>
+    .contact-form {
+        padding:  40px;
+        background-color: #c3ddf5;
+        border-radius: 12px;
+        max-width: 600px;
+        padding-top:10px;
+    }
+    .titlecontact {
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #002244;
+    }
+</style>
+
+<div class="container">
+    <form action="/ contact" method="post" class="contact-form" id="contactform" novalidate="novalidate">
+        <p class="titlecontact">Contact Us</p>
+        <p>
+            Feel free to contact us if you have any question, suggestion, feedback or seen any error or mistake.
+        </p>
+
+        <div>
+            <input class="form-control rounded border-white mt-3 form-input input-validation-error" data-val="true" data-val-required="Please enter your name" id="Name" name="Name" placeholder="Name" type="text" value="" aria-describedby="Name-error" aria-invalid="true">
+            <span class="text-danger field-validation-error" data-valmsg-for="Name" data-valmsg-replace="true"><span id="Name-error" class="">Please enter your name</span></span>
+        </div>
+        <div>
+            <input class="form-control rounded border-white mt-3 form-input input-validation-error" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="Please enter your email" id="Email" name="Email" placeholder="Email" type="text" value="" aria-describedby="Email-error">
+            <span class="text-danger field-validation-error" data-valmsg-for="Email" data-valmsg-replace="true"><span id="Email-error" class="">Please enter your email</span></span>
+        </div>
+        <div>
+            <input class="form-control rounded border-white mt-3 form-input input-validation-error" data-val="true" data-val-required="Please enter a subject/topic" id="Subject" name="Subject" placeholder="Subject" type="text" value="" aria-describedby="Subject-error">
+            <span class="text-danger field-validation-error" data-valmsg-for="Subject" data-valmsg-replace="true"><span id="Subject-error" class="">Please enter a subject/topic</span></span>
+        </div>
+        <div>
+            <textarea class="form-control rounded border-white mt-3 pt-2 form-text-area input-validation-error" cols="50" data-val="true" data-val-required="Please enter your message" id="Message" name="Message" placeholder="Message" rows="10" aria-describedby="Message-error" aria-invalid="true"></textarea>
+            <span class="text-danger field-validation-error" data-valmsg-for="Message" data-valmsg-replace="true"><span id="Message-error" class="">Please enter your message</span></span>
+        </div>
+     
+
+        <div class="submit-button-wrapper mt-3">
+            <input type="submit" class="btn btn-primary btn-lg submitbtn" id="btnSubmit" value="Submit">
+            <img id="loader" src="/Content/images/loader.gif" style="position:absolute;height:50px;width:50px;display:none">
+        </div>
+    </form>
+
+</div>
